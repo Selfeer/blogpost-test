@@ -1,1 +1,1 @@
-# blogpost-test
+# ClickHouse vs DuckDB
