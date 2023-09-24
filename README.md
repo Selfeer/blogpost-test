@@ -90,3 +90,6 @@ It is worth noting though that ClickHouse is supposed to be much faster with que
  SELECT UserID FROM file(hits_parquet_8d18d12d_4cc2_11ee_924e_01a4aa584ed2.parquet) WHERE UserID = 435090932899640449;
 ```
 After analyzing these results an [issue was raised on github](https://github.com/ClickHouse/ClickHouse/issues/54372) regarding the parquet fullscan reading speed by ClickHouse.
+
+## Conclusion
+Performance results were far from uniform. Depending on the dataset and the specific query, either ClickHouse or DuckDB emerged as the frontrunner, showcasing the nuanced nature of database performance. For the ontime dataset, ClickHouse outperformed DuckDB in one query but was slower in most others. In contrast, for the hits dataset, ClickHouse showed more instances of better performance.
