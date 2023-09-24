@@ -49,7 +49,15 @@ Let's see how fast can these database systems read from the Parquet file. We are
 
 ### Ontime
 
-Let's start with the ontime dataset
+Let's start with the ontime dataset. If you want to see more details about these queries and the results along with the raw data collected from the run, you can visit the [results](https://github.com/Altinity/clickhouse-regression/tree/main/parquet/performance/results/ontime/23.8.2.7) page on github.
 
 ![bar_chart](https://github.com/Selfeer/blogpost-test/assets/26748221/23ed607d-5088-4b16-92aa-92c89e68c029)
 
+On this bar chart, we see the runtime comparison between ClickHouse and DuckDB on 10 different queries that read data from the Parquet file.
+
+The chart shows that when it comes to ontime dataset with 200 million rows inside the Parquet file the ClickHouse runs slower on 9 queries out of 10. The ClickHouse seems to be around 8% faster thought on the query number seven.
+
+Here is this query,
+```sql
+ SELECT Year, avg(DepDelay>10)*100 FROM file('ontime_parquet_9f6790d3_4cc4_11ee_924e_01a4aa584ed2.parquet') GROUP BY Year ORDER BY Year;
+```
