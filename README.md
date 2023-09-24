@@ -94,4 +94,4 @@ After analyzing these results an [issue was raised on github](https://github.com
 ## Conclusion
 Performance results were far from uniform. Depending on the dataset and the specific query, either ClickHouse or DuckDB emerged as the frontrunner, showcasing the nuanced nature of database performance. For the ontime dataset, ClickHouse outperformed DuckDB in one query but was slower in most others. In contrast, for the hits dataset, ClickHouse showed more instances of better performance.
 
-We would also like to encourage you to check the different results between versions of [ClickHouse](https://github.com/Altinity/clickhouse-regression/tree/main/parquet/performance/results).
+We would also like to encourage you to check the different [results between versions of ClickHouse](https://github.com/Altinity/clickhouse-regression/tree/main/parquet/performance/results).
