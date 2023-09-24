@@ -1,4 +1,4 @@
-# Parquet performance: ClickHouse vs DuckDB
+# Parquet Performance: ClickHouse vs DuckDB
 
 Parquet, a popular columnar storage format, has become a linchpin for data-driven organizations seeking efficient and scalable solutions. But when it comes to unleashing the true potential of Parquet data, two contenders stand out: ClickHouse and DuckDB.
 
