@@ -45,4 +45,6 @@ Now that all of the dependencies are installed and the prerequisites are satisfi
 > For additional details refer to the program's README file
 
 ## Performance Results
+The way to compare the parquet performance between these two tools is pretty simple, we just need a large dataset stored inside the parquet file and a set of queries we are going to run on both ClickHouse and DuckDB. The [test program](https://github.com/Altinity/clickhouse-regression/tree/main/parquet/performance) uses two datasets. One is an [ontime dataset containing airline flight data](https://clickhouse.com/docs/en/getting-started/example-datasets/ontime) and the other is [hits dataset] used by [clickbench](https://github.com/ClickHouse/ClickBench).
+
 
