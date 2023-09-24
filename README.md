@@ -57,12 +57,12 @@ This bar chart shows the runtime difference between ClickHouse and DuckDB on 10 
 
 On the chart, we can see that when it comes to ontime dataset with 200 million rows inside the Parquet file the ClickHouse runs slower on 9 queries out of 10. The ClickHouse seems to be around 8% faster thought on query number seven.
 
-Here is query number seven, which provides the results faster on ClickHouse. It simply calculates the percentage of flights delayed for more than 10 minutes, by year
+Here is query number seven, which provides the results faster on ClickHouse. It simply calculates the percentage of flights delayed for more than 10 minutes, by year.
 ```sql
  SELECT Year, avg(DepDelay>10)*100 FROM file('ontime_parquet_9f6790d3_4cc4_11ee_924e_01a4aa584ed2.parquet') GROUP BY Year ORDER BY Year;
 ```
 
-And here is query number five in which DuckDB is faster. It returns the percentage of delays by carrier for the year 2007
+And here is query number five in which DuckDB is faster. It returns the percentage of delays by carrier for the year 2007.
 
 ```sql
  SELECT IATA_CODE_Reporting_Airline AS Carrier, avg(DepDelay>10)*100 AS c3 FROM file('ontime_parquet_9f6790d3_4cc4_11ee_924e_01a4aa584ed2.parquet') WHERE Year=2007 GROUP BY Carrier ORDER BY c3 DESC
