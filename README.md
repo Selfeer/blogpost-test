@@ -13,33 +13,36 @@ In order to reproduce the performance results using your own machine you need to
 git clone https://github.com/Altinity/clickhouse-regression.git
 ```
 
-To run the program you need to have Python (version: 3.8 or greater).
+To run the program you need to have Python (version: 3.8 or greater) and pip package-management system.
 
-Install pip:
+To install pip run the following commands:
   ```bash
   sudo apt update
   sudo apt install python3-pip
   ```
-Get all python dependencies from `requirements.txt` file located in the root directory:
+
+You also need to get all python dependencies from `requirements.txt` file located in the root directory:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Install `unzip`:
+And install `unzip` if you don't already have it installed (unzip is required to get the DuckDB binary)
+
 
 ```bash
 sudo apt install unzip
 ```
 
-You also need docker in order to run the test program, for ubuntu refer to [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/).
+You also need docker to run the test program, for ubuntu refer to [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/).
 
 ### Run The Program
 
-Now that all of the dependencies are installed and the prerequisites are satisfied we can navigate to the `/parquet/performance/` and run the program
+Now that all of the dependencies are installed and the prerequisites are satisfied we can navigate to the `/parquet/performance/` and run the program.
 ```bash
 ./performance.py --clickhouse-binary-path docker://clickhouse/clickhouse-server:23.8.2.7-alpine --clickhouse-version 23.8.2.7-alpine --duckdb-binary-path https://github.com/duckdb/duckdb/releases/download/v0.8.1/duckdb_cli-linux-amd64.zip 
 ```
+> For additional details refer to the program's README file
 
 ## Performance Results
 
