@@ -51,7 +51,8 @@ Let's see how fast can these database systems read from the Parquet file. We are
 
 Let's start with the ontime dataset. If you want to see more details about the queries that are used for comparison and the results along with the raw data collected from the run, you can visit the [results](https://github.com/Altinity/clickhouse-regression/tree/main/parquet/performance/results/ontime/23.8.2.7) page on github.
 
-![bar_chart](https://github.com/Selfeer/blogpost-test/assets/26748221/23ed607d-5088-4b16-92aa-92c89e68c029)
+![Untitled design](https://github.com/Selfeer/blogpost-test/assets/26748221/4399ff0c-cbb3-49ef-afd7-4b23dff1c9f7)
+
 
 This bar chart shows the runtime difference between ClickHouse and DuckDB on 10 different queries that read data from the Parquet file.
 
